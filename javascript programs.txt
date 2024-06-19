@@ -1,0 +1,124 @@
+                                                                 JAVASCRIPT CODING CHALLENGES
+
+1.flatten an array of array:
+
+code:
+
+<script>
+        let arr = [[0,1], [2,3], [4,5]]
+        var item = []
+
+        for(let i of arr)
+        {
+            for(let j of i)
+            {
+                item.push(j)
+            }
+        }
+        console.log(item)
+</script>
+
+2.find largest number in array:
+
+<script>
+        let arr = [4,5,7,8,9,11,12,17,97,47]
+        max_num = arr[0]
+        
+        var find = item =>{
+            for(let i of item)
+            {
+               if(i > max_num)
+               {
+                max_num = i
+               }
+            }
+        }
+
+        find(arr)
+        console.log(max_num)
+</script>
+
+3.Remove duplicate from an array
+
+<script>
+        let arr = [1,2,3,7,4,2,8,7,5,2,9,5,6,8,2,5,7,6,2]
+        var filter_array = []
+        
+        var find = item =>{
+            for(let i of item)
+            {
+               if(filter_array.indexOf(i) == -1)
+               {
+                filter_array.push(i)
+               }
+            }
+        }
+
+        find(arr)
+        console.log(filter_array)
+        
+</script>
+
+4.print  duplicate value,original value and count of duplicates:
+
+ <script>
+        let arr = [1,2,3,7,4,2,8,7,5,2,9,5,6,8,2,5,7,6,2]
+        var filter_array = []
+        var duplicate_value= []
+        var count = 0
+        
+        var find = item =>{
+            for(let i of item)
+            {
+               if(filter_array.indexOf(i) == -1)
+               {
+                filter_array.push(i)
+               }
+               else{
+                   duplicate_value.push(i)
+                   count += 1
+               }
+            }
+        }
+
+        find(arr)
+        console.log(filter_array)
+        console.log(duplicate_value)
+        console.log(count)
+        
+    </script>
+
+5. Generate Random AlphaNumeric Captcha
+
+var show = document.getElementById("tag")
+    var random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        
+     function change()
+     {
+        var text = ''
+        for(i=1; i<=6; i++)
+        {
+            text += create()
+        }
+        show.textContent = text
+        show.style.color = "red"
+     }
+     
+        function create()
+      {
+        var randomindex = Math.floor(Math.random()*random.length)
+        return random[randomindex]
+      } 
+
+6. find last element of an array without using lenght property
+
+const arr = ['white', 'black', 'yellow', 'blue']
+      count = 0
+       for(let i of arr)
+       {
+        count += 1
+       }
+       console.log(arr[count-1])
+
+7. 
+
