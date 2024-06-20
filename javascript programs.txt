@@ -120,5 +120,79 @@ const arr = ['white', 'black', 'yellow', 'blue']
        }
        console.log(arr[count-1])
 
-7. 
+7. write a function that returns the reverse of a string?
+
+ var reverse = str => {
+        var reversed = str.split('').reverse().join("")
+        return reversed
+    }
+    
+    var str1 = 'mohan'
+    console.log(reverse(str1))
+
+8. write a function that returns the longest word in the sentence?
+
+var reverse = str => {
+        var reversed = str.split(' ')
+        var longestword = ''
+        for(let i of reversed)
+        {
+             if(i.length > longestword.length)
+             {
+                longestword = i
+             }
+           
+        }
+        return longestword
+       
+    }
+    
+    var str1 = 'hi hello everyone, how are you ?'
+    console.log(reverse(str1))
+
+9.given string is a palindrome or not?
+
+ var reverse = str => {
+        var len = str.length -1
+        
+        for(i=0; i<str.length; i++)
+        {
+            if(str[i] !== str[len])
+            {  
+               return "not a polindrome"
+                
+            }
+            len --;   
+        }
+        return " polindrome"
+       
+    }
+    var str1 = 'malayalam'
+   console.log(reverse(str1)) 
+
+10. check two strings are anagrams or not?
+
+var reverse = (str1,str2) => {
+        if(str1.length !== str2.length)
+        {
+            return false
+        }
+        else{
+            var sort1 = str1.split('').sort()
+            var sort2 = str2.split('').sort()
+            for(i=0; i<str1.length; i++)
+            {
+                if(sort1[i] !== sort2[i])
+                {
+                    return false
+                }
+            }
+            return true
+        }    
+    }
+    var str1 = "note"
+    var str2  = 'toee'
+   console.log(reverse(str1,str2)) 
+
+
 
